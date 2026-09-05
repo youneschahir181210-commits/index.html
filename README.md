@@ -1,1 +1,60 @@
-# index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>⚠️ AVERTISSEMENT URGENT - ROBLOX SECURITY & LEGAL ACTION</title>
+    <style>
+        body { background-color: #1a1a1a; color: #ff0000; font-family: 'Arial', sans-serif; text-align: center; padding: 20px; }
+        h1 { font-size: 24px; margin-bottom: 10px; }
+        .timer { font-size: 36px; font-weight: bold; margin: 20px 0; }
+        .warning { background-color: #ff3333; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .fake-form { background-color: #2a2a2a; padding: 20px; border-radius: 5px; max-width: 400px; margin: 0 auto; }
+        input, button { width: 100%; padding: 10px; margin-bottom: 10px; }
+        button { background-color: #ff0000; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="warning">
+        ⚠️ **ATTENTION : CE COMPTE VIOLERAIT LES TERMES DE SERVICE DE ROBLOX**
+        <br><br>
+        Nous avons détecté une activité frauduleuse liée à votre compte TikTok (@techfreerobux]).
+        <br><br>
+        **Preuves recueillies :**
+        - Tentative de vol de comptes Roblox via phishing (email + pseudo).
+        - Utilisation de techniques interdites (Robux générés illégalement).
+        - Risque de suspension définitive de votre compte TikTok et poursuites judiciaires.
+    </div>
+
+    <h1>⏳ TEMPS RESTANT POUR ÉVITER LES CONSÉQUENCES :</h1>
+    <div class="timer" id="timer">6 HOURS</div>
+
+    <div class="fake-form">
+        <h2>🔒 TRANSFERT DE FONDS OBLIGATOIRE</h2>
+        <p>Pour éviter toute action légale, vous devez nous transférer immédiatement la somme de **80 €** sur le PayPal ci-dessous.</p>
+
+        <input type="text" placeholder="Votre nom complet (pour vérification)" required>
+        <input type="email" placeholder="Votre email Roblox (preuve que vous avez lu)" required>
+
+        <button onclick="alert('⚠️ Ce formulaire est une simulation. Transférez 80€ sur ce PayPal : (youneschahir181210@gmail.com)">
+            ⚡ CONFIRMER LE PAIEMENT
+        </button>
+
+        <p style="font-size: 12px; color: #888;">*Ce processus est géré par Roblox Security & PayPal Legal Team.*</p>
+    </div>
+
+    <script>
+        // Compteur à rebours FAKE (juste pour l'effet psychologique)
+        let timeLeft = 6 * 60 * 60 * 1000;
+        const timer = document.getElementById('timer');
+
+        setInterval(() => {
+            timeLeft -= 100;
+            const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+            timer.textContent = `${hours} HOUR${hours !== 1 ? 'S' : ''} RESTANT`;
+            if (timeLeft <= 0) {
+                timer.style.color = "#ff3333";
+                timer.innerHTML = "❌ TEMPS ÉCOULÉ<br><strong>Votre compte sera bloqué dans les prochaines minutes.</strong>";
+            }
+        }, 10);
+    </script>
+</body>
+</html># index.html
